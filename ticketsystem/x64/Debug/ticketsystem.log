@@ -1,0 +1,8 @@
+﻿  register.cpp
+  dashboard.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
+register.obj : warning LNK4248: unresolved typeref token (0100001F) for 'sqlite3'; image may not run
+login.obj : warning LNK4248: unresolved typeref token (01000020) for 'sqlite3'; image may not run
+init.obj : warning LNK4248: unresolved typeref token (0100001F) for 'sqlite3'; image may not run
+login.obj : warning LNK4248: unresolved typeref token (01000019) for 'sqlite3_stmt'; image may not run
+  ticketsystem.vcxproj -> C:\dev\ticketSystem\x64\Debug\ticketsystem.exe

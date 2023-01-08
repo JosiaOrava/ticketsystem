@@ -1,0 +1,6 @@
+C:\dev\ticketSystem\ticketsystem\x64\Debug\ticketsystem.vcxproj.AssemblyReference.cache
+C:\dev\ticketSystem\ticketsystem\x64\Debug\ticketsystem.vcxproj.SuggestedBindingRedirects.cache
+C:\dev\ticketSystem\ticketsystem\x64\Debug\ticketsystem.dashboard.resources
+C:\dev\ticketSystem\ticketsystem\x64\Debug\ticketsystem.vcxproj.GenerateResource.cache
+C:\dev\ticketSystem\ticketsystem\x64\Debug\ticketsystem.loginForm.resources
+C:\dev\ticketSystem\ticketsystem\x64\Debug\ticketsystem.registerpage.resources
