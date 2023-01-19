@@ -4,7 +4,9 @@
 
 This is application that lets user to register a new user and login to ticketsystem where user can submit ticket and view alredy submitted tickets by them.
 Admin can see all tickets and mark them as completed.
-
+![picture of register page](https://github.com/JosiaOrava/ticketsystem/blob/main/images/register_page.PNG)
+![picture of login page](https://github.com/JosiaOrava/ticketsystem/blob/main/images/login_page.PNG)
+![picture of dashboard](https://github.com/JosiaOrava/ticketsystem/blob/main/images/dashboard.PNG)
 ## Technologies used
 * C++
 * .NET
