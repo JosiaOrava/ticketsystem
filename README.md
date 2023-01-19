@@ -4,7 +4,7 @@
 
 This is application that lets user to register a new user and login to ticketsystem where user can submit ticket and view alredy submitted tickets by them.
 Admin can see all tickets and mark them as completed.
-!() <img src="[/uploads/d19fcc3d3b4d313c8cd7960a343463b6/table.png](https://github.com/JosiaOrava/ticketsystem/blob/main/images/register_page.PNG)"  width="220">
+!() <img src="https://github.com/JosiaOrava/ticketsystem/blob/main/images/register_page.PNG"  width="220">
 ![picture of login page](https://github.com/JosiaOrava/ticketsystem/blob/main/images/login_page.PNG){width=400 height=600}
 ![picture of dashboard](https://github.com/JosiaOrava/ticketsystem/blob/main/images/dashboard.PNG){width=400 height=600}
 ## Technologies used
