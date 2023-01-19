@@ -14,7 +14,7 @@ Admin can see all tickets and mark them as completed.
 * SQLite
 
 ## What I have learned
-This project have given great understanding about graphical interface using .NET and also have learned alot by using SQLite database.
+This project has provided a significant educational experience, specifically regarding the utilization of the .NET framework with C++, as well as the implementation of SQLite within a C++ environment.
 
 ## Current state
 In this state the user register and login is finished. Also ticket submitting is ready. Next addition will be for user to see their alredy submitted tickets.
