@@ -119,25 +119,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dashboard.cpp" />
-    <ClCompile Include="init.cpp" />
-    <ClCompile Include="login.cpp" />
-    <ClCompile Include="loginForm.cpp" />
-    <ClCompile Include="register.cpp" />
-    <ClCompile Include="registerpage.cpp" />
+    <ClCompile Include="src\dashboard\dashboard.cpp" />
+    <ClCompile Include="src\init.cpp" />
+    <ClCompile Include="src\login\login.cpp" />
+    <ClCompile Include="src\login\loginForm.cpp" />
+    <ClCompile Include="src\register\register.cpp" />
+    <ClCompile Include="src\register\registerpage.cpp" />
     <ClCompile Include="sqlite\shell.c">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
     </ClCompile>
     <ClCompile Include="sqlite\sqlite3.c">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
     </ClCompile>
-    <ClCompile Include="tickets.cpp" />
+    <ClCompile Include="src\tickets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dashboard.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="db.h" />
+    <ClInclude Include="includes\db.h" />
     <ClInclude Include="loginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -146,7 +146,7 @@
     </ClInclude>
     <ClInclude Include="sqlite\sqlite3.h" />
     <ClInclude Include="sqlite\sqlite3ext.h" />
-    <ClInclude Include="user.h" />
+    <ClInclude Include="includes\user.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dashboard.resx">
@@ -160,7 +160,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ticketsystem.db" />
+    <None Include="db\ticketsystem.db" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

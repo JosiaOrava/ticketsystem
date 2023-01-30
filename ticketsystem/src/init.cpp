@@ -5,7 +5,7 @@
 
 void initDB() {
 	sqlite3* db;
-	sqlite3_open("ticketsystem.db", &db);
+	sqlite3_open("../db/ticketsystem.db", &db);
 	char* err;
 	int rc;
 

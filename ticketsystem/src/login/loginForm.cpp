@@ -12,10 +12,6 @@ int main() {
 	ticketsystem::MyForm login;
 	
 	login.ShowDialog();
-	if (login.credentialsOk) {
-		ticketsystem::dashboard dh;
-		dh.ShowDialog();
-	}
 	if (login.registerPage) {
 		ticketsystem::registerpage rp;
 		rp.ShowDialog();
@@ -23,6 +19,11 @@ int main() {
 			login.ShowDialog();
 		}
 	}
+	if (login.credentialsOk) {
+		ticketsystem::dashboard dh;
+		dh.ShowDialog();
+	}
+	
 	
 	return 0;
 }

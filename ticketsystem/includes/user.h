@@ -5,4 +5,5 @@
 struct userInfo{
 	std::string email;
 	std::string password;
+	int userID;
 };

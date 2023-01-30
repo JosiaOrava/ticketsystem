@@ -12,7 +12,7 @@ int checkPasswordMatch(System::String^ password, System::String^ confirmPassword
 
 void registerUser(userInfo* user) {
 	sqlite3* db;
-	sqlite3_open("ticketsystem.db", &db);
+	sqlite3_open("db/ticketsystem.db", &db);
 	char* err;
 	int rc;
 	std::string query = "INSERT INTO users (email, password, role)  VALUES (\'" + user->email + "\', \'" + user->password + "\', 'employee')";

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="loginForm.cpp">
+    <ClCompile Include="src\login\loginForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sqlite\shell.c">
@@ -24,30 +24,30 @@
     <ClCompile Include="sqlite\sqlite3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="init.cpp">
+    <ClCompile Include="src\init.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="login.cpp">
+    <ClCompile Include="src\login\login.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dashboard.cpp">
+    <ClCompile Include="src\dashboard\dashboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="registerpage.cpp">
+    <ClCompile Include="src\register\registerpage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="register.cpp">
+    <ClCompile Include="src\register\register.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tickets.cpp">
+    <ClCompile Include="src\tickets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="db.h">
+    <ClInclude Include="includes\db.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="user.h">
+    <ClInclude Include="includes\user.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dashboard.h">
@@ -67,6 +67,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ticketsystem.db" />
+    <None Include="db\ticketsystem.db" />
   </ItemGroup>
 </Project>

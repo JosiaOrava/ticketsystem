@@ -8,7 +8,7 @@ int checkCredentials(userInfo* user) {
 	sqlite3* db;
 	sqlite3_stmt* stmt;
 	int result;
-	sqlite3_open("ticketsystem.db", &db);
+	sqlite3_open("db/ticketsystem.db", &db);
 	std::string sql = "SELECT EXISTS (SELECT * FROM users WHERE email=\'" + user->email + "\' AND password=\'" + user->password + "\')";
 	sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, 0);
 	sqlite3_step(stmt);

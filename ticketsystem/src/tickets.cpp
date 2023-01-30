@@ -10,7 +10,7 @@ void newTicket(std::string title, std::string desc, int userID)
 	char* err;
 	int rc;
 	std::stringstream query;
-	sqlite3_open("ticketsystem.db", &db);
+	sqlite3_open("../db/ticketsystem.db", &db);
 	query << "INSERT INTO tickets('userID','title','description','status') VALUES(" << userID  << ",\'" << title << "\', \'" << desc << "\', 0);";
 	const std::string tmp = query.str();
 	const char* sqlQuery = tmp.c_str();

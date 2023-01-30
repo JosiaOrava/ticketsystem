@@ -1,4 +1,7 @@
 #pragma once
+#include "includes/db.h"
+
+
 
 namespace ticketsystem {
 
@@ -14,6 +17,14 @@ namespace ticketsystem {
 	/// </summary>
 	public ref class dashboard : public System::Windows::Forms::Form
 	{
+		void MarshalString(System::String^ s, std::string& os) {
+			using namespace System;
+			using namespace Runtime::InteropServices;
+			const char* chars =
+				(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
+			os = chars;
+			Marshal::FreeHGlobal(IntPtr((void*)chars));
+		}
 	public:
 		dashboard(void)
 		{
@@ -37,7 +48,8 @@ namespace ticketsystem {
 	private: System::Windows::Forms::Label^ dashboardTitle;
 	private: System::Windows::Forms::Button^ submitTicketBtn;
 	private: System::Windows::Forms::TextBox^ ticketTextBox;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ titleTextBox;
+
 	private: System::Windows::Forms::Label^ myTicketsLabel;
 	private: System::Windows::Forms::ListView^ yourTicketsListView;
 
@@ -59,7 +71,7 @@ namespace ticketsystem {
 			this->dashboardTitle = (gcnew System::Windows::Forms::Label());
 			this->submitTicketBtn = (gcnew System::Windows::Forms::Button());
 			this->ticketTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->titleTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->myTicketsLabel = (gcnew System::Windows::Forms::Label());
 			this->yourTicketsListView = (gcnew System::Windows::Forms::ListView());
 			this->SuspendLayout();
@@ -85,6 +97,7 @@ namespace ticketsystem {
 			this->submitTicketBtn->TabIndex = 1;
 			this->submitTicketBtn->Text = L"Submit ticket";
 			this->submitTicketBtn->UseVisualStyleBackColor = true;
+			this->submitTicketBtn->Click += gcnew System::EventHandler(this, &dashboard::submitTicketBtn_Click);
 			// 
 			// ticketTextBox
 			// 
@@ -95,13 +108,13 @@ namespace ticketsystem {
 			this->ticketTextBox->TabIndex = 2;
 			this->ticketTextBox->Text = L"Explain problem";
 			// 
-			// textBox1
+			// titleTextBox
 			// 
-			this->textBox1->Location = System::Drawing::Point(13, 157);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(455, 20);
-			this->textBox1->TabIndex = 3;
-			this->textBox1->Text = L"Title";
+			this->titleTextBox->Location = System::Drawing::Point(13, 157);
+			this->titleTextBox->Name = L"titleTextBox";
+			this->titleTextBox->Size = System::Drawing::Size(455, 20);
+			this->titleTextBox->TabIndex = 3;
+			this->titleTextBox->Text = L"Title";
 			// 
 			// myTicketsLabel
 			// 
@@ -131,7 +144,7 @@ namespace ticketsystem {
 			this->ClientSize = System::Drawing::Size(850, 473);
 			this->Controls->Add(this->yourTicketsListView);
 			this->Controls->Add(this->myTicketsLabel);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->titleTextBox);
 			this->Controls->Add(this->ticketTextBox);
 			this->Controls->Add(this->submitTicketBtn);
 			this->Controls->Add(this->dashboardTitle);
@@ -142,5 +155,33 @@ namespace ticketsystem {
 
 		}
 #pragma endregion
-	};
+		int checkTextBoxes(System::String^ title, System::String^ desc) {
+			if (System::String::IsNullOrEmpty(title)) {
+				return 0;
+			}
+			else if (System::String::IsNullOrEmpty(desc)) {
+				return -1;
+			}
+			return 1;
+		}
+	private: System::Void submitTicketBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+		std::string title, desc;
+		int userID, result;
+		result = checkTextBoxes(titleTextBox->Text, ticketTextBox->Text);
+		if (result == 1) {
+			MarshalString(titleTextBox->Text, title);
+			MarshalString(ticketTextBox->Text, desc);
+			newTicket(title, desc, userID);
+		}
+		else if (result == 0) {
+
+		}
+		else if(result == -1) {
+			
+		}
+		
+	}
+};
 }
+
+
