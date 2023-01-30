@@ -1,6 +1,18 @@
-﻿  register.cpp
+﻿  dashboard.cpp
+  init.cpp
+  login.cpp
+  loginForm.cpp
+  register.cpp
+  registerpage.cpp
+  tickets.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  shell.c
+  sqlite3.c
+  Generating Code...
   dashboard.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
+tickets.obj : warning LNK4248: unresolved typeref token (0100001F) for 'sqlite3'; image may not run
 register.obj : warning LNK4248: unresolved typeref token (0100001F) for 'sqlite3'; image may not run
 login.obj : warning LNK4248: unresolved typeref token (01000020) for 'sqlite3'; image may not run
 init.obj : warning LNK4248: unresolved typeref token (0100001F) for 'sqlite3'; image may not run

@@ -131,6 +131,7 @@
     <ClCompile Include="sqlite\sqlite3.c">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
     </ClCompile>
+    <ClCompile Include="tickets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dashboard.h">
